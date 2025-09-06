@@ -152,12 +152,6 @@ section {
   text-decoration: line-through; /* strike-through text */
 }
 
-#credits {
-  font-weight: bold;
-  margin-top: 0.5rem;
-  text-align: right; /* aligns to the right of the section */
-}
-
 .filter-btn {
   background-color: #3c6382; /* dark blue */
   color: white;
@@ -173,6 +167,12 @@ section {
 .filter-btn:focus {
   background-color: #0a3d62; /* darker blue on hover/focus */
   outline: 2px solid #fff; /* visible focus for accessibility */
+}
+
+#credits {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  text-align: right;
 }
 
 /* 5. Footer */
