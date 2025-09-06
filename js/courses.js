@@ -4,6 +4,8 @@ const courses = [
   { code: 'CSE 110', title: 'Intro to Programming', credits: 2, category: 'CSE', completed: true },
   { code: 'CSE 111', title: 'programming with classes', credits: 2, category: 'CSE', completed: true },
   { code: 'ITM 111', title: 'Intro to Databases', credits: 3, category: 'ITM', completed: true },
+  { code: 'WDD 231', title: 'Web Frontend Development', credits: 2, category: 'WDD', completed: false },
+  { code: 'GS 170', title: 'Career Decelopment', credits: 2, category: 'GS', completed: false },
 ];
 
 const container = document.getElementById('courses-list'); // your container element in HTML
