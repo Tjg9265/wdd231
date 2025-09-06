@@ -67,6 +67,13 @@ header span {
   border: none;
   color: white;
   cursor: pointer;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  #menu {
+    display: none;
+  }
 }
 
 nav {
@@ -118,6 +125,40 @@ nav a[aria-current="page"] {
 
 #site-nav.open {
   display: flex;
+}
+
+/* About Section Styling */
+#about {
+  background: #eaf6ff; /* soft light blue */
+  border-left: 6px solid #0a3d62;
+}
+
+/* Resources Section Styling */
+#resources {
+  background: #fff8e6; /* soft warm yellow */
+  border-left: 6px solid #ff9900;
+}
+
+#about, #resources {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#courses {
+  background-color: #f0f8ff; /* soft light blue */
+  border-left: 6px solid #0a3d62; /* dark blue left border */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#courses-heading {
+  color: #0a3d62;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 /* menu button styles */
