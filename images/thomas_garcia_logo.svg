@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Thomas Garcia logo">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#E8D9C1"/>
+  <!-- Circular emblem -->
+  <g transform="translate(600,260)">
+    <circle r="160" fill="#7A4A2E" opacity="1"/>
+    <circle r="136" fill="#D9B18A"/>
+    <!-- Outer ring -->
+    <circle r="160" fill="none" stroke="#4A2212" stroke-width="14"/>
+    <!-- Monogram TG -->
+    <!-- We'll use two text elements to better control letter placement and weight -->
+    <text x="0" y="30" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="160" fill="#3B1E12">T</text>
+    <text x="60" y="90" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="120" fill="#3B1E12">G</text>
+  </g>
+
+  <!-- Name text (stacked) -->
+  <g transform="translate(600,640)">
+    <text x="0" y="0" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="120" fill="#4A2212">Thomas</text>
+    <text x="0" y="130" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="120" fill="#4A2212">Garcia</text>
+  </g>
+</svg>
