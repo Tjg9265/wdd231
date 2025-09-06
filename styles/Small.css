@@ -131,6 +131,50 @@ section {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.course {
+  background-color: #e0f7fa; /* light blue */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.course h3 {
+  margin-bottom: 0.5rem;
+}
+
+.course p {
+  margin: 0.25rem 0;
+}
+
+.course.completed {
+  background-color: #d3ffd3; /* light green */
+  text-decoration: line-through; /* strike-through text */
+}
+
+#credits {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  text-align: right; /* aligns to the right of the section */
+}
+
+.filter-btn {
+  background-color: #3c6382; /* dark blue */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: #0a3d62; /* darker blue on hover/focus */
+  outline: 2px solid #fff; /* visible focus for accessibility */
+}
+
 /* 5. Footer */
 footer {
   text-align: center;
