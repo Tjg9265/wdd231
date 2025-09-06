@@ -42,6 +42,22 @@ body {
   padding: 0.5rem;
 }
 
+body::before {
+  content: "";
+  position: fixed;      /* stay in place as you scroll */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;         /* adjust size */
+  height: 400px;
+  background: url('../images/Elegant\ Thomas\ Garcia\ Logo\ Design.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.05;        /* very faint watermark */
+  pointer-events: none; /* allows clicking through */
+  z-index: -1;          /* behind all content */
+}
+
+
 header {
   display: flex;
   justify-content: space-between;
@@ -154,6 +170,7 @@ nav a[aria-current="page"] {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 
 #courses-heading {
   color: #0a3d62;
