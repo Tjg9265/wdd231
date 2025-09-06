@@ -38,7 +38,7 @@ body {
   font-family: 'Inter', sans-serif; 
   line-height: 1.5;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: #e6e6e6;
   padding: 0.5rem;
 }
 
@@ -52,7 +52,7 @@ body::before {
   height: 400px;
   background: url('../images/Elegant\ Thomas\ Garcia\ Logo\ Design.png') no-repeat center center;
   background-size: contain;
-  opacity: 0.05;        /* very faint watermark */
+  opacity: 0.20;        /* very faint watermark */
   pointer-events: none; /* allows clicking through */
   z-index: -1;          /* behind all content */
 }
@@ -224,6 +224,20 @@ section {
   background-color: #d3ffd3; /* light green */
   text-decoration: line-through; /* strike-through text */
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 1.5rem;                    /* space between columns */
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .grid-container {
+    grid-template-columns: 1fr;   /* stack sections on smaller screens */
+  }
+}
+
 
 .filter-btn {
   background-color: #3c6382; /* dark blue */
