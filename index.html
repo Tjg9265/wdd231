@@ -3,77 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thomas Garcia | WDD 231 Course Home page for Thomas Garcia</title>
+  <title>Thomas Garcia | WDD 231 Course Home</title>
   <meta name="description" content="WDD 231 Course Home page for Thomas Garcia">
   <meta name="author" content="Thomas Garcia">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ovo&family=Radley:ital@0;1&family=Roboto+Slab:wght@100..900&family=Rubik+Dirt&family=Rye&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/Small.css">
   <link rel="stylesheet" href="styles/Larger.css">
+
+  <!-- JS -->
   <script src="js/navigation.js" defer></script>
   <script src="js/date.js" defer></script>
   <script src="js/courses.js" defer></script>
 </head>
 <body>
+  
+  <!-- Header / Navigation -->
   <header>
-  <div class="brand">
-    <img src="images/thomas_garcia_logo.svg" alt="Personal logo" width="48" height="48">
-    <span class="name">Thomas Garcia</span>
-  </div>
+    <div class="brand">
+      <img src="images/thomas_garcia_logo.svg" alt="Personal logo" width="48" height="48">
+      <span class="name">Thomas Garcia</span>
+    </div>
 
-  <button id="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
+    <button id="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
 
-  <nav id="site-nav">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="chamber.html">Chamber Project</a>
-    <a href="final.html">Final Project</a>
-  </nav>
-</header>
+    <nav id="site-nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="chamber.html">Chamber Project</a>
+      <a href="final.html">Final Project</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
   <main>
-    <div class="grid-container"></div>
-      <h1>Home</h1>
+    <h1>Home</h1>
 
+    <div class="grid-container">
+      <!-- About Section -->
       <section id="about" aria-labelledby="about-heading">
         <h2 id="about-heading">About</h2>
         <img src="images/thomas1.jpg" alt="Photo of Thomas Garcia" class="profile-pic">
-        <div>
-          <p>
-            Hi, my name is <strong>Thomas Garcia</strong>. I am currently studying web
-            development and excited to expand my skills in HTML, CSS, and JavaScript.
-            I enjoy solving problems, building creative projects, and learning new
-            technologies that can make websites both functional and user-friendly.
-          </p>
-          <p>
-            Outside of school, I enjoy spending time with family, exploring the outdoors, reading, playing sports.
-            I also enjoye playing video games, board games and table top games. I look forward to working on developing my skills further.
-          </p>
-      </div>
-    </section>
-    <section id="courses" aria-labelledby="courses-heading">
-      <h2 id="courses-heading">Certificate Courses</h2>
-      <div id="filter-buttons"></div>
-      <div id="courses-list"></div>
-      <p id="credits"></p>
-    </section>
+        <p>
+          Hi, my name is <strong>Thomas Garcia</strong>. I am currently studying web
+          development and excited to expand my skills in HTML, CSS, and JavaScript.
+          I enjoy solving problems, building creative projects, and learning new
+          technologies that can make websites both functional and user-friendly.
+        </p>
+        <p>
+          Outside of school, I enjoy spending time with family, exploring the outdoors, reading, and playing sports.
+          I also enjoy playing video games, board games, and tabletop games. I look forward to developing my skills further.
+        </p>
+      </section>
+
+      <!-- Certificate Courses Section -->
+      <section id="courses" aria-labelledby="courses-heading">
+        <h2 id="courses-heading">Certificate Courses</h2>
+        <div id="filter-buttons"></div>
+        <div id="courses-list"></div>
+        <p id="credits"></p>
+      </section>
+    </div>
+
+    <!-- Resources Section -->
     <section id="resources" aria-labelledby="resources-heading">
       <h2 id="resources-heading">Resources</h2>
       <ul>
-        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a> – official HTML, CSS, and JavaScript documentation</li>
-        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a> – tutorials and references for web development</li>
-        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validator</a> – check HTML validity</li>
-        <li><a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE</a> – accessibility testing tool</li>
-        <li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> – host your web projects</li>
+        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validator</a></li>
+        <li><a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE Accessibility Tool</a></li>
+        <li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></li>
       </ul>
     </section>
   </main>
-  
+
+  <!-- Footer -->
   <footer>
     <p class="social">
-      <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
-      • <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a> •
+      <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
     </p>
-    <p>&copy; <span id="year"></span> | Thomas Garcia | Utah United States</p>
+    <p>&copy; <span id="year"></span> | Thomas Garcia | Utah, United States</p>
     <p id="lastModified"></p>
   </footer>
 </body>
