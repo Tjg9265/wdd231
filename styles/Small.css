@@ -184,6 +184,11 @@ nav a[aria-current="page"] {
   background: none;
   border: none;
   cursor: pointer;
+  color: #fff; 
+}
+
+#menu-btn:hover {
+  color: #9db3c5;           /* slightly different on hover */
 }
 
 main {
