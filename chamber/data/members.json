@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Cedar Valley Bakery",
+    "address": "123 Main St, Timbuktu",
+    "phone": "555-0100",
+    "website": "https://cedarvalleybakery.example",
+    "image": "bakery.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Blue River Auto",
+    "address": "22 River Rd, Timbuktu",
+    "phone": "555-0101",
+    "website": "https://blueriverauto.example",
+    "image": "auto.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Sunset Café",
+    "address": "7 Market St, Timbuktu",
+    "phone": "555-0102",
+    "website": "https://sunsetcafe.example",
+    "image": "cafe.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Pine & Co. Real Estate",
+    "address": "90 Hill Ave, Timbuktu",
+    "phone": "555-0103",
+    "website": "https://pineco.example",
+    "image": "realestate.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Timbuktu Gym",
+    "address": "410 Fitness Pkwy, Timbuktu",
+    "phone": "555-0104",
+    "website": "https://timbuktugym.example",
+    "image": "gym.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Green Thumb Landscaping",
+    "address": "78 Garden Ln, Timbuktu",
+    "phone": "555-0105",
+    "website": "https://greenthumb.example",
+    "image": "landscape.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Atlas Legal",
+    "address": "500 Justice Blvd, Timbuktu",
+    "phone": "555-0106",
+    "website": "https://atlaslegal.example",
+    "image": "law.jpg",
+    "membership": 3
+  }
+]

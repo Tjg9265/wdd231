@@ -1,0 +1,6 @@
+/* minimal reset */
+*, *::before, *::after { box-sizing: border-box; }
+html,body{margin:0;padding:0;height:100%;}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;text-decoration:none;}
+.container{width:calc(100% - 2rem);max-width:1100px;margin:0 auto;}

@@ -1,0 +1,183 @@
+:root{
+  --primary:#0d6efd;
+  --accent:#2EC4B6;
+  --bg:#F5DEB3;
+  --text:#222;
+  --muted:#666;
+  --card-bg:#f9f9f9;
+  --gap:1rem;
+  --radius:12px;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Base */
+body{background:var(--bg);color:var(--text);line-height:1.4;font-size:16px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{font-size:1.25rem;color:var(--primary);margin:0}
+.primary-nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+.primary-nav a{padding:0.5rem 0.5rem;border-radius:6px}
+.primary-nav a.active{background:var(--primary);color:white}
+
+/* Mobile nav */
+.menu-toggle{display:none;background:none;border:0;font-size:1.25rem}
+@media (max-width:640px){
+  .primary-nav{display:none}
+  .menu-toggle{display:block}
+  .primary-nav.open{display:block;background:#fff;padding:1rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+  .primary-nav ul{flex-direction:column;gap:.5rem}
+}
+
+/* Controls */
+.controls{display:flex;justify-content:flex-end;padding:0.5rem 0}
+.view-toggle button{padding:.4rem .6rem;border:1px solid #ddd;border-radius:6px;margin-left:.5rem;background:white}
+.view-toggle button[aria-pressed="true"]{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+/* Members grid view */
+.members.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap:var(--gap);
+  margin:1rem 0;
+}
+
+/* Member card */
+.card{
+  background:var(--card-bg);
+  padding:1rem;
+  border-radius:var(--radius);
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+  min-height:120px;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);
+}
+.card img.logo{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.card h3{margin:.25rem 0;font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.card .meta{display:flex;justify-content:space-between;gap:.5rem;align-items:center}
+
+/* List view: stacked rows, hide images */
+.members.list{display:block}
+.members.list .card{display:flex;flex-direction:row;align-items:center;gap:1rem;padding:.75rem}
+.members.list .card img.logo{width:80px;height:80px}
+.members.list .card .content{flex:1}
+.members.list .card img{display:block}
+
+/* If you want list WITHOUT images (rubric requires list without images): */
+.members.list .card img{display:none}
+
+/* Footer */
+.site-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem;color:var(--muted);font-size:.9rem}
+
+/* Small screens tweaks */
+@media (max-width:460px){
+  .card img.logo{height:120px}
+  .members.list .card{flex-direction:column;align-items:flex-start}
+}
+
+/* General Page Setup */
+body {
+background: var(--bg);
+  color: var(--text);
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: #F5DEB3;
+  color: var(--text);  /* dark text */
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+header .brand {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary); /* keep logo/title blue */
+}
+
+/* Navigation inside header */
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-nav a {
+  color: var(--text); /* black/dark gray text */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.primary-nav a:hover {
+   background: var(--accent);  /* gold highlight */
+  color: white;
+}
+
+.primary-nav a.active {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+/* Main Content */
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main h2 {
+  color: var(--primary);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+main p {
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* Hero / top banner */
+.hero {
+  background-color: #2EC4B6; /* deep blue background */
+  color: #fff;               /* white text */
+  text-align: center;
+  padding: 60px 20px;        /* space above and below */
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Hero text */
+.hero h1 {
+  font-size: 2.5rem;         /* larger heading */
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;       /* a little spacing between letters */
+}
+
+/* Optional: smaller tagline */
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #0d6efd; /* soft gold accent for tagline */
+}
+
+
+/* Footer */
+.site-footer {
+  background:#2EC4B6; /* light background */
+  color: var(--text);  /* black/dark gray text */
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
