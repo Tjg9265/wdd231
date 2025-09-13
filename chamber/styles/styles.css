@@ -31,9 +31,55 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
+header.hero {
+    background-color: #0d3b66;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
 header .logo {
   height: 60px;
   width: auto;
+}
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1,
+.hero-content p {
+    margin: 0.5rem 0;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: #f4d35e;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.nav-buttons {
+    margin-bottom: 1rem;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    background-color: #f4d35e;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: #ffc107;
 }
 
 header .brand {
@@ -155,6 +201,25 @@ main p {
   margin: 0.5rem 0 1.5rem;
   color: var(--text);
 }
+
+/* Hide menu on mobile by default */
+nav.mobile-nav {
+  display: none;
+}
+
+/* Show menu when 'open' class is added */
+nav.mobile-nav.open {
+  display: block;
+}
+
+/* Optional: style the button */
+.menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 
 /* Members grid/list */
 .members.grid {

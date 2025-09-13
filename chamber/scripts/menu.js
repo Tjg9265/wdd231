@@ -1,10 +1,12 @@
-// scripts/menu.js
-const menuToggle = document.getElementById('menuToggle');
-const primaryNav = document.getElementById('primary-nav');
+// menu.js
+document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".mobile-nav");
 
-if (menuToggle) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = primaryNav.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-}
+    if (menuButton && nav) {
+        menuButton.addEventListener("click", () => {
+            nav.classList.toggle("open");
+            menuButton.classList.toggle("active");
+        });
+    }
+});
