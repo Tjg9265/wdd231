@@ -1,29 +1,28 @@
-:root{
-  --primary:#0d6efd;
-  --accent:#2EC4B6;
-  --bg:#F5DEB3;
-  --text:#222;
-  --muted:#666;
-  --card-bg:#f9f9f9;
-  --gap:1rem;
-  --radius:12px;
+:root {
+  --primary: #0d6efd;
+  --accent: #2EC4B6;
+  --bg: #0d3b66; /* dark blue for main and footer */
+  --text: #fff;   /* white text on dark background */
+  --muted: #ccc;
+  --card-bg: #f9f9f9;
+  --gap: 1rem;
+  --radius: 12px;
   font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 /* Base */
 body {
-  background: var(--bg);
+  background: #f5deb3; /* light tan background for page outside main content */
   color: var(--text);
   line-height: 1.5;
   font-size: 16px;
-  font-family: var(--font-family);
   margin: 0;
   padding: 0;
 }
 
 /* Header */
 header {
-  background-color: var(--primary);
+  background-color: var(--bg); /* dark blue header */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -62,33 +61,24 @@ header .brand {
   transition: background 0.2s;
 }
 
-.primary-nav a:hover {
-  background: var(--accent);
-  color: white;
-}
-
+.primary-nav a:hover,
 .primary-nav a.active {
   background: var(--accent);
-  color: var(--primary);
+  color: var(--bg);
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  width: 100%;
-  height: 600px; /* adjust as needed */
-  background-image: url('images/town.png'); /* town image as background */
-  background-size: cover;       /* image fills entire hero */
-  background-position: center;  /* centers the image */
+  height: 70vh;
+  background: url("../images/town.png") no-repeat center center/cover;
   display: flex;
-  align-items: center;          /* vertically center text */
-  justify-content: center;      /* horizontally center text */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
-  overflow: hidden;
 }
 
-/* Faded overlay so text is readable */
 .hero::before {
   content: "";
   position: absolute;
@@ -96,14 +86,13 @@ header .brand {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4); /* 40% black overlay */
+  background-color: rgba(13, 59, 102, 0.7); /* dark blue overlay */
   z-index: 1;
 }
 
-/* Hero text content */
 .hero-content {
   position: relative;
-  z-index: 2;  /* above overlay */
+  z-index: 2;
   max-width: 90%;
 }
 
@@ -116,10 +105,9 @@ header .brand {
 .hero p {
   font-size: 1.2rem;
   margin-top: 10px;
-  color: #2EC4B6; /* accent color */
+  color: var(--accent);
 }
 
-/* Logo in top-right corner */
 .hero .logo {
   position: absolute;
   top: 20px;
@@ -129,10 +117,9 @@ header .brand {
   z-index: 3;
 }
 
-/* Hero button */
 .hero-btn {
   display: inline-block;
-  background-color: #2EC4B6;
+  background-color: var(--accent);
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -143,8 +130,109 @@ header .brand {
 }
 
 .hero-btn:hover {
-  background-color: #0d6efd;
+  background-color: var(--primary);
   transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+  background-color: var(--bg); /* dark blue main box */
+   background-image: none; /* make sure no hero image shows */
+  color: white;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  border-radius: var(--radius);
+}
+
+main h2 {
+  color: var(--accent);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+main p {
+  margin: 0.5rem 0 1.5rem;
+  color: var(--text);
+}
+
+/* Members grid/list */
+.members.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+  margin: 1rem 0;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 120px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card img.logo {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 0.25rem 0;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.card .meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.members.list {
+  display: block;
+}
+
+.members.list .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+}
+
+.members.list .card img.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.members.list .card .content {
+  flex: 1;
+}
+
+.members.list .card img {
+  display: none;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--bg); /* dark blue footer */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
 }
 
 /* Responsive */
@@ -156,71 +244,7 @@ header .brand {
   .hero-btn { padding: 0.5rem 1rem; font-size: 0.9rem; }
 }
 
-/* Main Content */
-main {
-  max-width: 960px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-main h2 {
-  color: var(--primary);
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-main p {
-  margin: 0.5rem 0 1.5rem;
-}
-
-/* Members grid/list */
-.members.grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap:var(--gap);
-  margin:1rem 0;
-}
-
-.card{
-  background:var(--card-bg);
-  padding:1rem;
-  border-radius:var(--radius);
-  display:flex;
-  flex-direction:column;
-  gap:.5rem;
-  min-height:120px;
-  box-shadow:0 1px 3px rgba(0,0,0,.04);
-}
-.card img.logo{width:100%;height:140px;object-fit:cover;border-radius:8px}
-.card h3{margin:.25rem 0;font-size:1.1rem}
-.card p{margin:0;color:var(--muted);font-size:.95rem}
-.card .meta{display:flex;justify-content:space-between;gap:.5rem;align-items:center}
-
-.members.list{display:block}
-.members.list .card{display:flex;flex-direction:row;align-items:center;gap:1rem;padding:.75rem}
-.members.list .card img.logo{width:80px;height:80px}
-.members.list .card .content{flex:1}
-.members.list .card img{display:block}
-.members.list .card img{display:none}
-
-/* Footer */
-.site-footer {
-  background: var(--accent);
-  color: var(--text);
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  border-top: 1px solid #ddd;
-}
-
-/* Responsive */
-@media (max-width: 640px) {
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
-  .hero .logo { height: 50px; }
-}
-@media (max-width:460px){
-  .card img.logo{height:120px}
-  .members.list .card{flex-direction:column;align-items:flex-start}
+@media (max-width: 460px) {
+  .card img.logo { height: 120px; }
+  .members.list .card { flex-direction: column; align-items: flex-start; }
 }
