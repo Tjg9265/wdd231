@@ -4,7 +4,7 @@
     "address": "123 Main St, Timbuktu",
     "phone": "555-0100",
     "website": "https://cedarvalleybakery.example",
-    "image": "bakery.jpg",
+    "image": "cedar_valley.png",
     "membership": 3
   },
   {
@@ -12,7 +12,7 @@
     "address": "22 River Rd, Timbuktu",
     "phone": "555-0101",
     "website": "https://blueriverauto.example",
-    "image": "auto.jpg",
+    "image": "blue-river.png",
     "membership": 2
   },
   {
@@ -20,7 +20,7 @@
     "address": "7 Market St, Timbuktu",
     "phone": "555-0102",
     "website": "https://sunsetcafe.example",
-    "image": "cafe.jpg",
+    "image": "sunset.png",
     "membership": 1
   },
   {
@@ -28,7 +28,7 @@
     "address": "90 Hill Ave, Timbuktu",
     "phone": "555-0103",
     "website": "https://pineco.example",
-    "image": "realestate.jpg",
+    "image": "pine-co.png",
     "membership": 3
   },
   {
@@ -36,7 +36,7 @@
     "address": "410 Fitness Pkwy, Timbuktu",
     "phone": "555-0104",
     "website": "https://timbuktugym.example",
-    "image": "gym.jpg",
+    "image": "t-gym.png",
     "membership": 2
   },
   {
@@ -44,7 +44,7 @@
     "address": "78 Garden Ln, Timbuktu",
     "phone": "555-0105",
     "website": "https://greenthumb.example",
-    "image": "landscape.jpg",
+    "image": "green.png",
     "membership": 1
   },
   {
@@ -52,7 +52,21 @@
     "address": "500 Justice Blvd, Timbuktu",
     "phone": "555-0106",
     "website": "https://atlaslegal.example",
-    "image": "law.jpg",
+    "image": "atlas.png",
     "membership": 3
-  }
+  },
+  {
+      "name": "Smith's Bakery",
+      "image": "smith's.png",
+      "address": "123 Main Street",
+      "phone": "555-1234",
+      "website": "https://smithsbakery.com"
+    },
+    {
+      "name": "GreenTech Solutions",
+      "image": "greentech.png",
+      "address": "456 Greenway Ave",
+      "phone": "555-5678",
+      "website": "https://greentech.com"
+    }
 ]

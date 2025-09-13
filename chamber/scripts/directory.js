@@ -1,12 +1,10 @@
-// scripts/directory.js
-
-const container = document.querySelector('.members');
-
 async function loadMembers() {
   const response = await fetch('data/members.json');
   const data = await response.json();
 
-  data.members.forEach(member => {
+  const container = document.querySelector('#members-container'); // make sure you have this in HTML
+
+  data.forEach(member => {
     const card = document.createElement('section');
     card.classList.add('member-card');
 
