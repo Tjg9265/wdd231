@@ -46,21 +46,34 @@
     </div>
   </header>
 
-  <main class="container">
-        <h1>Timbuktu Chamber — Directory</h1>
-        <section class="controls">
-        <div class="view-toggle" role="toolbar" aria-label="View toggle">
-            <button id="gridBtn" aria-pressed="true">Grid View</button>
-            <button id="listBtn" aria-pressed="false">List View</button>
-        </div>
+    <main>
+        <section id="directory-intro">
+            <h2>Business Directory</h2>
+            <p>Welcome to the Timbuktu Chamber Business Directory! Browse our list of local businesses and find services, shops, and professionals that make our community thrive. Click on a business name for more details.</p>
         </section>
 
-        <section id="members" class="members grid" aria-live="polite">
-        <!-- JS will inject member cards here -->
+        <!-- Directory List -->
+        <section id="directory-list">
+            <h3>Featured Businesses</h3>
+            <ul>
+            <li><strong>Sunny Bakery</strong> – Freshly baked goods and community favorites.</li>
+            <li><strong>Timbuktu Books</strong> – Your local bookstore with a wide selection and friendly staff.</li>
+            <li><strong>Main Street Cafe</strong> – Cozy cafe serving breakfast, lunch, and local coffee.</li>
+            <li><strong>Smith's bakery</strong>mith's Bakery has been serving our community for over 20 years with fresh breads, pastries, and custom cakes. Visit them for a taste of local flavor!</li>
+            <img src="images/smith's.png" alt="Smith's Bakery Logo" class="business-logo">
+            <li><strong>GreenTech Solutions</strong> – Innovative tech services for homes and businesses.</li>
+            <img src="images/greentech.png" alt="GreenTech Solutions Logo" class="business-logo">
+            </ul>
+            <p>Use the search or filter options above to quickly find the business you’re looking for.</p>
         </section>
 
-        <div id="error" class="error" hidden></div>
-  </main>
+        <!-- Join Us Callout -->
+        <section id="directory-join">
+            <h3>Want to Be Listed?</h3>
+            <p>If you own a local business and want to join the Timbuktu Chamber Directory, please <a href="join.html">become a member</a> to get listed and connect with the community.</p>
+        </section>
+    </main>
+
 
   <footer class="site-footer">
     <div class="container">
