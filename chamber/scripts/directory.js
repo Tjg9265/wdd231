@@ -1,16 +1,25 @@
-// directory.js
-document.addEventListener("DOMContentLoaded", () => {
-    // Example: highlight business spotlight cards on hover
-    const spotlightCards = document.querySelectorAll(".spotlight-card");
+// scripts/directory.js
 
-    spotlightCards.forEach((card) => {
-        card.addEventListener("mouseenter", () => {
-            card.classList.add("highlight");
-        });
-        card.addEventListener("mouseleave", () => {
-            card.classList.remove("highlight");
-        });
-    });
+const container = document.querySelector('.members');
 
-    // Add more directory-related JS here if needed
-});
+async function loadMembers() {
+  const response = await fetch('data/members.json');
+  const data = await response.json();
+
+  data.members.forEach(member => {
+    const card = document.createElement('section');
+    card.classList.add('member-card');
+
+    card.innerHTML = `
+      <img src="images/${member.image}" alt="${member.name} logo">
+      <h2>${member.name}</h2>
+      <p>${member.address}</p>
+      <p>${member.phone}</p>
+      <a href="${member.website}" target="_blank">Visit Website</a>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+loadMembers();
