@@ -31,6 +31,16 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
+.hamburger {
+  font-size: 2rem;      /* make it big */
+  color: white;         /* make it stand out */
+  background: none;     /* no background box */
+  border: none;         /* remove border */
+  cursor: pointer;      /* show it’s clickable */
+  z-index: 1000;        /* keep it above other elements */
+}
+
+
 header.hero {
     background-color: #0d3b66;
     color: #fff;
@@ -87,6 +97,27 @@ header .brand {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--accent);
+}
+
+.mobile-nav,
+.primary-nav {
+  display: none;
+}
+
+.mobile-nav.open,
+.primary-nav.open {
+  display: block;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .mobile-nav,
+  .primary-nav {
+    display: block;
+  }
+  .menu-toggle {
+    display: none; /* Hide hamburger on desktop */
+  }
 }
 
 /* Navigation */
