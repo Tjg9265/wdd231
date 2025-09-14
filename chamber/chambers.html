@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:image" content="chamber_logo.png">
   <title>Timbaktu Chamber of Commerce</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ovo&family=Radley:ital@0;1&family=Roboto+Slab:wght@100..900&family=Rubik+Dirt&family=Rye&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
+  <style>
+        .hidden { display: none; }
+  </style>
 
 </head>
 <body>
@@ -18,15 +21,15 @@
         <img src="images/chamber_logo.png" alt="Chamber Logo" class="logo">
         
         <!-- Mobile menu button -->
-        <button class="menu-toggle" aria-label="Menu">☰</button>
-
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-            </ul>
+        <button id="hamburger">☰ Menu</button>
+        <nav id="menu" class="hidden">
+            
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="directory.html">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
         </nav>
         <div class="hero-content">
             <h1>Welcome Timbaktu Chamber of Commerce</h1>
@@ -129,8 +132,6 @@
     <footer class="site-footer">
         <p>&copy; <span id="year"></span> My Town Chamber of Commerce</p>
     </footer>
-
-        <script src="scripts/directory.js"></script>
         <script src="scripts/footer.js"></script>
         <script src="scripts/menu.js"></script>
     </body>

@@ -321,6 +321,8 @@ nav.mobile-nav.open {
   display: none;
 }
 
+.hidden { display: none !important; }
+
 /* Footer */
 .site-footer {
   background: var(--bg); /* dark blue footer */

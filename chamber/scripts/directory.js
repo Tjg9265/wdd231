@@ -2,7 +2,7 @@ async function loadMembers() {
   const response = await fetch('data/members.json');
   const data = await response.json();
 
-  const container = document.querySelector('#members-container'); // make sure you have this in HTML
+  const container = document.getElementById("members-container"); // make sure you have this in HTML
 
   data.forEach(member => {
     const card = document.createElement('section');
