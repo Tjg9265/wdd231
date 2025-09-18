@@ -96,6 +96,23 @@ header .logo {
     background-color: #ffc107;
 }
 
+/* Hide nav menu on small screens */
+#navMenu.hidden {
+  display: none;
+}
+
+/* On larger screens, always show menu and hide button */
+@media (min-width: 768px) {
+  #menuButton {
+    display: none;
+  }
+  #navMenu {
+    display: flex !important;
+    gap: 1rem;
+  }
+}
+
+
 header .brand {
   margin: 0;
   font-size: 1.5rem;
