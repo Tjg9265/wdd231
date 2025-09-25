@@ -17,32 +17,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/small.css">
 
 </head>
 <body>
    <header class="hero">
-        <img src="images/chamber_logo.png" alt="Chamber Logo" class="logo">
-        
-        <nav>
-            <button id="menuButton" aria-label="Menu">☰</button>
-            <ul id="navMenu" class="hidden">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="hero-content">
-                <h1>Timbuktu Chamber of Commerce</h1>
-                <p>Connecting our community and local businesses</p>
-                <a href="learn-more.html" class="hero-btn">Learn More</a>
-                <a href="../WWD231/index.html" class="hero-btn">Home</a>
-                <a href="directory.html" class="hero-btn active">Directory</a>
-                <a href="discover.html" class="hero-btn">Discover</a>
-                <a href="join.html" class="hero-btn">Join</a>
-                <a href="contact.html" class="hero-btn">Contact</a>
-            </div>
-        </nav>    
+        <div class="hero-content">
+            <h1>Timbuktu Chamber of Commerce</h1>
+            <p>Connecting our community and local businesses</p>
+        </div>
+
+        <div class="logo">
+            <img src="images/chamber_logo.png" alt="Timbuktu Chamber Logo">
+            <span>Timbuktu Chamber</span>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation">☰</button>
+
+        <!-- Nav Links -->
+        <nav id="nav-bar" class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="learn-more.html">Learn More</a>
+            <a href="about.html">About</a>
+            <a href="directory.html">Directory</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
+
 
     <main>
         <h1>Timbuktu Chamber — Directory</h1>
@@ -80,9 +83,9 @@
         </section>
 
         <section>
-            <h2>Local Weather</h2>
-            <p>Today's forecast: Mostly sunny, high of 78°F (25°C), low of 60°F (16°C). Chance of rain: 10%.</p>
-            <p>Stay tuned for weekly weather updates to plan your events and activities.</p>
+            <p id="current-temp"></p>
+            <p id="current-desc"></p>
+            <div id="forecast"></div>
         </section>
         <section id="upcoming-events">
             <h2>Upcoming Events</h2>
@@ -92,7 +95,7 @@
                 <li><strong>Annual Town Festival:</strong> Friday, Oct 4 – Sunday, Oct 6 at Central Park</li>
             </ul>
         </section>
-        <section id="meeting-schedule">
+        <section id="events">
             <h2>Chamber Meeting Schedule</h2>
             <table>
                 <thead>
@@ -141,5 +144,7 @@
     </footer>
         <script src="scripts/footer.js"></script>
         <script src="scripts/menu.js"></script>
+        <script src="scripts/weather.js"></script>
+        <script src="scripts/spotlight.js"></script>
     </body>
     </html>

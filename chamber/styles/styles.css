@@ -12,7 +12,7 @@
 
 /* Base */
 body {
-  background: #f5deb3; /* light tan background for page outside main content */
+  background: #f5deb3; /* light tan background outside main */
   color: var(--text);
   line-height: 1.5;
   font-size: 16px;
@@ -20,13 +20,14 @@ body {
   padding: 0;
 }
 
+/* Hide utility */
 .hidden {
-    display: none;
+  display: none !important;
 }
 
 /* Header */
 header {
-  background-color: var(--bg); /* dark blue header */
+ background-color: var(--bg); /* dark blue header */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -35,15 +36,11 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
-.hamburger {
-  font-size: 2rem;      /* make it big */
-  color: white;         /* make it stand out */
-  background: none;     /* no background box */
-  border: none;         /* remove border */
-  cursor: pointer;      /* show it’s clickable */
-  z-index: 1000;        /* keep it above other elements */
+header img {
+  max-width: 120px;   /* keeps it small */
+  height: auto;
+  display: block;
 }
-
 
 header.hero {
     background-color: #0d3b66;
@@ -62,83 +59,30 @@ header .logo {
     margin-bottom: 1rem;
 }
 
-.hero-content h1,
-.hero-content p {
-    margin: 0.5rem 0;
-}
-
-.hero-btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    background-color: #f4d35e;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.nav-buttons {
-    margin-bottom: 1rem;
-}
-
-.nav-btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem 0.5rem 0.5rem;
-    background-color: #f4d35e;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.nav-btn:hover {
-    background-color: #ffc107;
-}
-
-/* Hide nav menu on small screens */
-#navMenu.hidden {
-  display: none;
-}
-
-/* On larger screens, always show menu and hide button */
-@media (min-width: 768px) {
-  #menuButton {
-    display: none;
-  }
-  #navMenu {
-    display: flex !important;
-    gap: 1rem;
-  }
-}
-
-
-header .brand {
-  margin: 0;
+.brand {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--accent);
+  text-decoration: none;
+  margin-left: 1rem;
 }
 
-.mobile-nav,
-.primary-nav {
-  display: none;
-}
-
-.mobile-nav.open,
-.primary-nav.open {
-  display: block;
-}
-
-/* Desktop view */
-@media (min-width: 768px) {
-  .mobile-nav,
-  .primary-nav {
-    display: block;
-  }
-  .menu-toggle {
-    display: none; /* Hide hamburger on desktop */
-  }
+/* Hamburger button */
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  border-radius: 50%;
+  padding: 0 0 5px 0;
 }
 
 /* Navigation */
@@ -165,16 +109,83 @@ header .brand {
   color: var(--bg);
 }
 
+/* Nav links */
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Mobile - nav hidden by default */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+
+  .nav-links {
+    display: none; /* hide nav by default */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--bg);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Desktop - nav always visible */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+  }
+
+  .nav-links ul {
+    flex-direction: row;
+  }
+}
+
 /* Hero Section */
 .hero {
-  position: relative;
-  height: 70vh;
-  background: url("../images/town.png") no-repeat center center/cover;
+  background-image: url("../images/town.png") no-repeat center center/cover; /* adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white;
 }
 
 .hero::before {
@@ -184,7 +195,7 @@ header .brand {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(13, 59, 102, 0.7); /* dark blue overlay */
+  background-color: rgba(13, 59, 102, 0.7); /* overlay */
   z-index: 1;
 }
 
@@ -197,12 +208,12 @@ header .brand {
 .hero h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 0;
+  margin: 0.5rem;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-top: 10px;
+  margin-top: 2rem;
   color: var(--accent);
 }
 
@@ -215,12 +226,20 @@ header .brand {
   z-index: 3;
 }
 
+/* HERO BUTTONS */
+.hero .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .hero-btn {
   display: inline-block;
-  background-color: var(--accent);
+  background-color: #1abc9c;
   color: white;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   margin-top: 20px;
@@ -228,14 +247,31 @@ header .brand {
 }
 
 .hero-btn:hover {
-  background-color: var(--primary);
+   background-color: #16a085;
   transform: translateY(-2px);
 }
 
+#menu-btn {
+  display: none;
+}
+
+  nav a {
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+
 /* Main Content */
 main {
-  background-color: var(--bg); /* dark blue main box */
-   background-image: none; /* make sure no hero image shows */
+  background-color: var(--bg);
   color: white;
   max-width: 960px;
   margin: 2rem auto;
@@ -254,25 +290,6 @@ main p {
   color: var(--text);
 }
 
-/* Hide menu on mobile by default */
-nav.mobile-nav {
-  display: none;
-}
-
-/* Show menu when 'open' class is added */
-nav.mobile-nav.open {
-  display: block;
-}
-
-/* Optional: style the button */
-.menu-toggle {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-
 /* Members grid/list */
 .members.grid {
   display: grid;
@@ -282,7 +299,8 @@ nav.mobile-nav.open {
 }
 
 .card {
-  background: var(--card-bg);
+  background:linear-gradient(135deg, #2980b9, #3498db);
+  color: #222; 
   padding: 1rem;
   border-radius: var(--radius);
   display: flex;
@@ -306,7 +324,7 @@ nav.mobile-nav.open {
 
 .card p {
   margin: 0;
-  color: var(--muted);
+  color: #0d6efd;;
   font-size: 0.95rem;
 }
 
@@ -342,11 +360,9 @@ nav.mobile-nav.open {
   display: none;
 }
 
-.hidden { display: none !important; }
-
 /* Footer */
 .site-footer {
-  background: var(--bg); /* dark blue footer */
+  background: var(--bg);
   color: white;
   text-align: center;
   padding: 1rem;
@@ -354,7 +370,7 @@ nav.mobile-nav.open {
   border-top: 1px solid #ddd;
 }
 
-/* Responsive */
+/* Responsive text & images */
 @media (max-width: 640px) {
   .hero { height: 450px; }
   .hero h1 { font-size: 2rem; }

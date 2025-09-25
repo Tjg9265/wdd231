@@ -1,0 +1,210 @@
+/* =========================
+   JOIN PAGE STYLES
+   ========================= */
+
+:root {
+  --primary: #0d6efd;
+  --accent: #2EC4B6;
+  --bg: #0d3b66; /* dark blue for main and footer */
+  --text: #fff;   /* white text on dark background */
+  --muted: #ccc;
+  --card-bg: #f9f9f9;
+  --gap: 1rem;
+  --radius: 12px;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* General resets */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background-color:#f5deb3; /* light tan background for page outside main content */
+  color: #222;
+}
+
+/* Header + Navigation */
+header {
+  background-color: #0d6efd;
+  color:#2EC4B6;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color:#2EC4B6;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #0d6efd;
+}
+
+/* Page Heading */
+main h1 {
+  text-align: center;
+  margin: 1.5rem 0;
+  color:#2EC4B6;
+}
+
+/* =========================
+   MEMBERSHIP CARDS
+   ========================= */
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1100px;
+  color:#2EC4B6;
+}
+
+.card {
+  background-color: #0d6efd; 
+  border: 2px solid #ddd;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+.card h2 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.card button {
+  margin-top: 1rem;
+  background-color:#003366;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #0055aa;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   JOIN FORM
+   ========================= */
+.join-form {
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color:#003366;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.join-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #bbb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+fieldset {
+  border: 2px solid #ddd;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  color: #003366;
+}
+
+.join-form input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.join-form button[type="submit"] {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.join-form button[type="submit"]:hover {
+  background-color: #0055aa;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  background-color:#0d6efd;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+@media (min-width: 600px) {
+  .membership-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .membership-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
