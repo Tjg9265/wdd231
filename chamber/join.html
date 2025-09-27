@@ -8,10 +8,16 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/join.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/normalize.css">
 </head>
 <body>
   <header>
-    <img src="images/chamber_logo.png" alt="Chamber Logo" class="logo">
+    <div class="logo">
+          <img src="images/chamber_logo.png" alt="Timbuktu Chamber Logo">
+          <span>Timbuktu Chamber</span>
+      </div>
     <h1>Timbuktu Chamber of Commerce</h1>
     <p>Connecting our community and local businesses</p>
 
@@ -141,11 +147,6 @@
     <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
   </footer>
 
-  <script>
-    // Auto timestamp
-    document.getElementById("timestamp").value = new Date().toISOString();
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="scripts/join.js" defer></script>
 </body>
 </html>
