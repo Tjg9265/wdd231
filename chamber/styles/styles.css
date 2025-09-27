@@ -175,17 +175,7 @@ header .logo {
 
 /* Hero Section */
 .hero {
-  background-image: url("../images/town.png") no-repeat center center/cover; /* adjust path if needed */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  text-align: center;
-  padding: 4rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: url("../images/town.png") no-repeat center center / cover;
 }
 
 .hero::before {
