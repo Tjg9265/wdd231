@@ -124,6 +124,38 @@ footer.footer { grid-area: footer; background: #0d6efd; color:  #2EC4B6; padding
   background-color:  #f5deb3;;
 }
 
+main {
+  min-height: 200px; /* temporary for debugging */
+  border: 1px solid blue; /* see if it’s rendering */
+}
+
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  min-height: 200px; /* ensure it has height */
+  border: 2px solid red; /* see if it renders */
+}
+
+.discover-grid {
+  display: grid !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+
 .grid-container::before {
   content: none;
   position: absolute;

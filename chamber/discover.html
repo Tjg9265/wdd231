@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:image" content="chamber_logo.png">
+  <meta property="og:image" content="images/chamber_logo.png">
   <meta name="description" content="The Timbuktu Chamber connects local businesses, provides community resources, and supports economic growth.">
   <meta name="author" content="Thomas Garcia">
   <meta property="og:title" content="Timbuktu Chamber of Commerce | Connect with Local Businesses">
   <meta property="og:description" content="The Timbuktu Chamber connects local businesses, provides community resources, and supports economic growth.">
   <meta property="og:url" content="https://tjg9265.github.io/wdd231/chamber/">
-  <title>Timbuktu Chamber of Commerce</title>
+  <meta name="description" content="Discover how the Timbuktu Chamber supports local businesses, promotes events, and strengthens economic growth.">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
   <!-- Main Site Header -->
   <header class="hero">
     <div class="header-text">
-        <h1>Timbuktu Chamber of Commerce</h1>
+        <h1>Get to know Timbuktu</h1>
         <p>Connecting our community and local businesses</p>
     </div>
     <div class="logo">
@@ -75,6 +75,7 @@
 
     <!-- Main Content -->
     <main class="main" id="main">
+        <h1>Get to know Timbuktu</h1>
         <h2>About the Timbuktu Chamber</h2>
         <p>The Timbuktu Chamber of Commerce is dedicated to connecting local businesses, promoting community events, and supporting economic growth in our area.</p>
 
@@ -87,6 +88,7 @@
 
         <h3>Resources</h3>
         <p>Explore our resources for local businesses, including marketing tips, funding opportunities, and partnership programs.</p>
+        
     </main>
 
     <!-- Sidebar -->
@@ -116,44 +118,7 @@
   </main>
 
   <!-- JavaScript -->
-  <script>
-    // Fetch JSON and build cards
-    fetch('data/discover.json')
-      .then(response => response.json())
-      .then(items => {
-        const grid = document.querySelector('.discover-grid');
-        items.forEach((item, index) => {
-          const card = document.createElement('section');
-          card.className = 'item-card';
-          card.id = `item${index+1}`;
-          card.innerHTML = `
-            <h2>${item.name}</h2>
-            <figure>
-              <img src="${item.image}" alt="${item.name}" loading="lazy">
-            </figure>
-            <address>${item.address}</address>
-            <p>${item.description}</p>
-            <button>Learn More</button>
-          `;
-          grid.appendChild(card);
-        });
-      });
 
-    // LocalStorage visit message
-    window.addEventListener('DOMContentLoaded', () => {
-      const messageEl = document.getElementById('visit-message');
-      const now = Date.now();
-      const lastVisit = localStorage.getItem('lastVisit');
-
-      if (!lastVisit) messageEl.textContent = "Welcome! Let us know if you have any questions.";
-      else {
-        const daysAgo = Math.floor((now - lastVisit) / (1000*60*60*24));
-        messageEl.textContent = daysAgo < 1 ? "Back so soon! Awesome!" :
-                                `You last visited ${daysAgo} ${daysAgo === 1 ? 'day' : 'days'} ago.`;
-      }
-
-      localStorage.setItem('lastVisit', now);
-    });
-  </script>
+  <script src="scripts/discover.js" defer></script>
 </body>
 </html>
