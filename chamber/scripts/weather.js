@@ -8,6 +8,7 @@ async function getWeather() {
     const response = await fetch(weatherUrl);
     if (!response.ok) throw new Error("Weather fetch failed");
     const data = await response.json();
+  
 
     // Current weather (first forecast item)
     document.querySelector("#current-temp").textContent = 
@@ -29,8 +30,9 @@ async function getWeather() {
     <p>Temp: ${day.main.temp.toFixed(1)} °F</p>
     <p>${day.weather[0].description}</p>
   `;
-  forecastContainer.appendChild(div);
-});
+  forecastContainer.appendChild(div);}
+  );}
+}
 
 
 getWeather();

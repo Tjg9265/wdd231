@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="chamber_logo.png">
+  <meta name="description" content="The Timbuktu Chamber connects local businesses, provides community resources, and supports economic growth.">
+  <meta name="author" content="Thomas Garcia">
+  <meta property="og:title" content="Timbuktu Chamber of Commerce | Connect with Local Businesses">
+  <meta property="og:description" content="The Timbuktu Chamber connects local businesses, provides community resources, and supports economic growth.">
+  <meta property="og:url" content="https://tjg9265.github.io/wdd231/chamber/">
+  <title>Timbuktu Chamber of Commerce</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/discover.css">
+</head>
+<body>
+
+  <!-- Main Site Header -->
+  <header class="hero">
+    <div class="header-text">
+        <h1>Timbuktu Chamber of Commerce</h1>
+        <p>Connecting our community and local businesses</p>
+    </div>
+    <div class="logo">
+        <img src="images/chamber_logo.png" alt="Timbuktu Chamber Logo">
+        <span>Timbuktu Chamber</span>
+    </div>
+    <button id="nav-button" class="hamburger" aria-label="Toggle Navigation">
+        &#9776;
+    </button>
+    <nav>
+        <div class="btn-group">
+            <a href="index.html" class="btn">Home</a>
+            <a href="directory.html" class="btn">Directory</a>
+            <a href="discover.html" class="btn">Discover</a>
+            <a href="join.html" class="btn">Join</a>
+            <a href="contact.html" class="btn">Contact</a>
+            <a href="thankyou.html" class="btn">Thank you</a>
+        </div>
+    </nav>
+  </header>
+
+  <!-- Page Grid Layout -->
+  <div class="grid-container">
+    <!-- Page Header -->
+    <header class="header">
+        <h1>Get to know Timbuktu</h1>
+        <p>Your guide to local businesses, events, and opportunities.</p>
+    </header>
+
+    <!-- Grid Navigation (page-specific) -->
+    <nav class="nav">
+        <ul>
+            <li><a href="#assignments">Assignments</a></li>
+            <li><a href="#main">Main Content</a></li>
+            <li><a href="#sidebar">Sidebar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Assignments Section -->
+    <section class="assignments" id="assignments">
+        <h2>Assignments</h2>
+        <ul>
+            <li><strong>Assignment 1:</strong> Chamber Directory – Due Oct 10</li>
+            <li><strong>Assignment 2:</strong> Discover Timbuktu – Due Oct 15</li>
+            <li><strong>Assignment 3:</strong> Join Form – Due Oct 20</li>
+        </ul>
+        <p>Click on each assignment title for more details and submission instructions.</p> 
+    </section>
+
+    <!-- Main Content -->
+    <main class="main" id="main">
+        <h2>About the Timbuktu Chamber</h2>
+        <p>The Timbuktu Chamber of Commerce is dedicated to connecting local businesses, promoting community events, and supporting economic growth in our area.</p>
+
+        <h3>Upcoming Events</h3>
+        <ul>
+            <li>Business Networking Night – Oct 5</li>
+            <li>Annual Chamber Gala – Nov 12</li>
+            <li>Community Clean-Up – Dec 1</li>
+        </ul>
+
+        <h3>Resources</h3>
+        <p>Explore our resources for local businesses, including marketing tips, funding opportunities, and partnership programs.</p>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <h2>Welcome!</h2>
+        <p>Discover Timbuktu: Where Community and Opportunity Meet.</p>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Timbuktu Chamber of Commerce</p>
+        <p>123 Main Street, Timbuktu | Phone: (555) 123-4567 | <a href="contact.html">Contact Us</a></p>
+        <p>Follow us on 
+            <a href="#">Facebook</a>, 
+            <a href="#">Twitter</a>, 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+  </div>
+
+  <!-- Visit Message -->
+  <aside id="visit-message" class="visit-msg"></aside>
+
+  <!-- Discover Grid (dynamic cards loaded via JS) -->
+  <main class="discover-grid">
+    <!-- Cards will be dynamically loaded -->
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    // Fetch JSON and build cards
+    fetch('data/discover.json')
+      .then(response => response.json())
+      .then(items => {
+        const grid = document.querySelector('.discover-grid');
+        items.forEach((item, index) => {
+          const card = document.createElement('section');
+          card.className = 'item-card';
+          card.id = `item${index+1}`;
+          card.innerHTML = `
+            <h2>${item.name}</h2>
+            <figure>
+              <img src="${item.image}" alt="${item.name}" loading="lazy">
+            </figure>
+            <address>${item.address}</address>
+            <p>${item.description}</p>
+            <button>Learn More</button>
+          `;
+          grid.appendChild(card);
+        });
+      });
+
+    // LocalStorage visit message
+    window.addEventListener('DOMContentLoaded', () => {
+      const messageEl = document.getElementById('visit-message');
+      const now = Date.now();
+      const lastVisit = localStorage.getItem('lastVisit');
+
+      if (!lastVisit) messageEl.textContent = "Welcome! Let us know if you have any questions.";
+      else {
+        const daysAgo = Math.floor((now - lastVisit) / (1000*60*60*24));
+        messageEl.textContent = daysAgo < 1 ? "Back so soon! Awesome!" :
+                                `You last visited ${daysAgo} ${daysAgo === 1 ? 'day' : 'days'} ago.`;
+      }
+
+      localStorage.setItem('lastVisit', now);
+    });
+  </script>
+</body>
+</html>

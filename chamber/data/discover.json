@@ -1,0 +1,50 @@
+[
+  {
+    "name": "City Museum",
+    "address": "123 Main St, Timbuktu, ST",
+    "description": "A fun and educational museum for all ages.",
+    "image": "images/city-museum.png"
+  },
+  {
+    "name": "River Park",
+    "address": "456 River Rd, Timbuktu, ST",
+    "description": "Scenic park along the river, great for picnics.",
+    "image": "images/river-park.png"
+  },
+  {
+    "name": "Historic Theater",
+    "address": "789 Elm St, Timbuktu, ST",
+    "description": "Classic performances and live shows all year.",
+    "image": "images/historic-theater.png"
+  },
+  {
+    "name": "Botanical Gardens",
+    "address": "101 Garden Ave, Timbuktu, ST",
+    "description": "Beautiful plants, walking paths, and events.",
+    "image": "images/botanical-gardens.png"
+  },
+  {
+    "name": "City Library",
+    "address": "202 Library Ln, Timbuktu, ST",
+    "description": "Resources, reading rooms, and community events.",
+    "image": "images/city-library.png"
+  },
+  {
+    "name": "Art Gallery",
+    "address": "303 Art Blvd, Timbuktu, ST",
+    "description": "Local and international exhibitions.",
+    "image": "images/art-gallery.png"
+  },
+  {
+    "name": "Town Square",
+    "address": "404 Main Square,Timbuktu, ST",
+    "description": "Events, markets, and community gatherings.",
+    "image": "images/town-square.png"
+  },
+  {
+    "name": "Sports Complex",
+    "address": "505 Sports Dr, Timbuktu, ST",
+    "description": "Facilities for basketball, soccer, and more.",
+    "image": "images/sports-complex.png"
+  }
+]
