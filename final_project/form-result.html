@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Submission Result</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/hiking_trails.png" alt="Local Hiking Trails Logo">
+      <h1>Local Hiking Trails</h1>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Local Hiking Trails</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Discover Beautiful Trails</h1>
+      <p>Browse through our curated list of trails and find your next adventure.</p>
+      <a href="trails.html" class="btn">Explore Trails</a>
+    </section>
+    <section class="form-result">
+      <h2>Thank you for your submission!</h2>
+      <div id="submitted-data">
+        <!-- Submitted form data will appear here -->
+      </div>
+      <a href="contact.html" class="btn">Submit Another Response</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Local Hiking Trails | Thomas Garcia</p>
+  </footer>
+
+  <!-- External JS file -->
+  <script src="scripts/form-result.js" defer></script>
+</body>
+</html>

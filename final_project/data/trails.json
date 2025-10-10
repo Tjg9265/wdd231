@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Maple Canyon Trail",
+    "location": "Mapleton, UT",
+    "difficulty": "Moderate",
+    "description": "A scenic trail featuring sandstone formations, perfect for moderate hikers.",
+    "image": "images/maple_canyon.jpg",
+    "distance": 3.5
+  },
+  {
+    "name": "Y Mountain Trail",
+    "location": "Provo, UT",
+    "difficulty": "Hard",
+    "description": "A steep climb that rewards hikers with panoramic views of Utah Valley.",
+    "image": "images/y_mountain.jpg",
+    "distance": 4.8
+  },
+  {
+    "name": "Battle Creek Falls",
+    "location": "Pleasant Grove, UT",
+    "difficulty": "Easy",
+    "description": "A family-friendly trail leading to a beautiful waterfall with a short hike.",
+    "image": "images/battle_creek.jpg",
+    "distance": 1.2
+  },
+  {
+    "name": "Squaw Peak Loop",
+    "location": "Orem, UT",
+    "difficulty": "Moderate",
+    "description": "Loop trail with forested areas and wildflowers in spring.",
+    "image": "images/squaw_peak.jpg",
+    "distance": 2.8
+  },
+  {
+    "name": "Mount Timpanogos Summit",
+    "location": "Alpine, UT",
+    "difficulty": "Hard",
+    "description": "Challenging summit trail for experienced hikers with incredible views.",
+    "image": "images/timpanogos.jpg",
+    "distance": 14.0
+  },
+  {
+    "name": "Provo River Parkway",
+    "location": "Provo, UT",
+    "difficulty": "Easy",
+    "description": "Flat riverside trail suitable for walking, jogging, and biking.",
+    "image": "images/provo_river.jpg",
+    "distance": 7.0
+  },
+  {
+    "name": "Bridal Veil Falls",
+    "location": "Provo Canyon, UT",
+    "difficulty": "Easy",
+    "description": "Short hike to a stunning waterfall, great for families and photos.",
+    "image": "images/bridal_veil.jpg",
+    "distance": 0.7
+  },
+  {
+    "name": "Timpooneke Trail",
+    "location": "American Fork Canyon, UT",
+    "difficulty": "Moderate",
+    "description": "Trail with alpine meadows and wildflowers, moderately challenging.",
+    "image": "images/timpooneke.jpg",
+    "distance": 7.5
+  },
+  {
+    "name": "Rock Canyon Trail",
+    "location": "Provo, UT",
+    "difficulty": "Moderate",
+    "description": "Trail with rock formations and small waterfalls, popular with hikers.",
+    "image": "images/rock_canyon.jpg",
+    "distance": 3.2
+  },
+  {
+    "name": "Lake Blanche Trail",
+    "location": "Alta, UT",
+    "difficulty": "Hard",
+    "description": "Steep trail to a beautiful alpine lake, requires proper gear.",
+    "image": "images/lake_blanche.jpg",
+    "distance": 6.8
+  },
+  {
+    "name": "Cecret Lake Trail",
+    "location": "Little Cottonwood Canyon, UT",
+    "difficulty": "Easy",
+    "description": "Gentle hike leading to a serene lake surrounded by mountains.",
+    "image": "images/cecret_lake.jpg",
+    "distance": 1.8
+  },
+  {
+    "name": "Grandeur Peak Trail",
+    "location": "Mill Creek Canyon, UT",
+    "difficulty": "Hard",
+    "description": "Challenging trail with rewarding panoramic views of Salt Lake Valley.",
+    "image": "images/grandeur_peak.jpg",
+    "distance": 6.0
+  },
+  {
+    "name": "Redwood Nature Trail",
+    "location": "Sandy, UT",
+    "difficulty": "Easy",
+    "description": "Short trail through a redwood forest, perfect for a morning walk.",
+    "image": "images/redwood_trail.jpg",
+    "distance": 1.5
+  },
+  {
+    "name": "Donut Falls Trail",
+    "location": "Big Cottonwood Canyon, UT",
+    "difficulty": "Easy",
+    "description": "Popular family-friendly trail to a waterfall with a small cave.",
+    "image": "images/donut_falls.jpg",
+    "distance": 3.0
+  },
+  {
+    "name": "Mount Nebo Trail",
+    "location": "Utah County, UT",
+    "difficulty": "Hard",
+    "description": "Steep ascent for experienced hikers with incredible summit views.",
+    "image": "images/mount_nebo.jpg",
+    "distance": 12.0
+  }
+]

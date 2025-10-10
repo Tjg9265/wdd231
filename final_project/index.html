@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Hiking Trails | Discover Nature Near You</title>
+  <meta name="description" content="Find and explore local hiking trails, trail maps, and outdoor adventures near you." />
+  <meta name="author" content="Thomas Garcia" />
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Local Hiking Trails" />
+  <meta property="og:description" content="Discover beautiful hiking trails and explore nature near you." />
+  <meta property="og:image" content="images/hiking_trails.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tjg9265.github.io/wdd231/finalproject/index.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <script type="module" src="scripts/trails.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/hiking_trails.png" alt="Local Hiking Trails Logo">
+      <h1>Local Hiking Trails</h1>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html" class="logo">Local Hiking Trails</a>
+      <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Explore the Best Local Hiking Trails</h1>
+      <p>Find new adventures, scenic views, and safe family-friendly trails near you.</p>
+      <a href="trails.html" class="btn">View Trails</a>
+    </section>
+
+    <section class="features">
+      <h2>Why Hike With Us?</h2>
+      <div class="feature-grid">
+        <article>
+          <h3>Curated Trail Info</h3>
+          <p>Every trail includes distance, difficulty, and scenic highlights for your planning.</p>
+        </article>
+        <article>
+          <h3>Local Photos</h3>
+          <p>View real trail photos shared by local hikers to see what awaits you.</p>
+        </article>
+        <article>
+          <h3>Safe Adventures</h3>
+          <p>We include safety tips and updated weather info for each trail.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Local Hiking Trails | Thomas Garcia</p>
+    <a href="attributions.html">Attributions</a> |
+    <a href="https://youtube.com/your-video-link" target="_blank">Project Video</a>
+  </footer>
+</body>
+</html>
