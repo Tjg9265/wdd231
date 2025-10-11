@@ -11,9 +11,12 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
   <script type="module" src="scripts/trails.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/theme.js" defer></script>
 </head>
 <body>
   <header>
+    <button id="theme-toggle">🌙 Dark Mode</button>
     <div class="logo">
       <img src="images/hiking_trails.png" alt="Local Hiking Trails Logo">
       <h1>Local Hiking Trails</h1>
@@ -23,10 +26,9 @@
     <nav id="nav-menu">
       <a href="index.html">Home</a>
       <a href="trails.html" class="active">Trails</a>
-      <a href="resources.html">Resources</a>
       <a href="join.html">Join</a>
       <a href="contact.html">Contact</a>
-      <li><a href="form-result.html" class="active">Thank you</a></li>
+      <a href="form-result.html">Thank you</a>
     </nav>
   </header>
 
@@ -40,7 +42,7 @@
       <!-- Trail cards will be dynamically injected here by trails.js -->
     </section>
   </main>
-  <div id="trailModal" class="modal">
+  <div id="trailModal" class="modal"aria-hidden="true">
     <div class="modal-content">
         <span class="close">&times;</span>
         <div id="modal-text"></div>

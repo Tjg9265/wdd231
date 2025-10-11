@@ -11,6 +11,22 @@ if (closeBtn && modal) {
   };
 }
 
+function openModal(trail) {
+  modalContent.innerHTML = `
+    <h3>${trail.name}</h3>
+    <p><strong>Location:</strong> ${trail.location}</p>
+    <p><strong>Difficulty:</strong> ${trail.difficulty}</p>
+    <p><strong>Distance:</strong> ${trail.distance} miles</p>
+    <p>${trail.description}</p>
+  `;
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+closeBtn.addEventListener('click', () => modal.setAttribute('aria-hidden', 'true'));
+window.addEventListener('click', e => {
+  if(e.target === modal) modal.setAttribute('aria-hidden', 'true');
+});
+
 // Only run trail fetching if container exists
 if (container) {
   fetch('./data/trails.json')
